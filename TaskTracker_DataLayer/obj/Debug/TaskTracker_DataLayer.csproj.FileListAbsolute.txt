@@ -1,0 +1,21 @@
+C:\Users\King Computer\source\repos\TaskTracker_DataLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\Users\King Computer\source\repos\TaskTracker_DataLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\Users\King Computer\source\repos\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.csproj.AssemblyReference.cache
+C:\Users\King Computer\source\repos\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\King Computer\source\repos\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.dll
+C:\Users\King Computer\source\repos\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project\TaskTracker_DataLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\Task Tracker Project\Project\TaskTracker_DataLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.csproj.AssemblyReference.cache
+C:\Task Tracker Project\Project\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.csproj.CoreCompileInputs.cache
+C:\Task Tracker Project\Project\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.dll
+C:\Task Tracker Project\Project\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.csproj.AssemblyReference.cache
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.csproj.CoreCompileInputs.cache
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\obj\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\bin\Debug\MyApp.Models.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\bin\Debug\MyApp.Models.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_DataLayer\obj\Debug\TaskTrac.E9B8466F.Up2Date
