@@ -3,7 +3,7 @@ Kanban Board is a simple Windows desktop application built with **C#** and **SQL
 
 ## 🧩 Features
 - Create, edit, and delete tasks easily  
-- Organize tasks into columns (New Task, Scheduled, In Progress, Complete)  
+- Organize tasks into columns (New Task, Scheduled, In Progress, Completed)  
 - Drag and drop tasks between columns  
 - Save your tasks with a local database backup (`.bak` file)  
 - Clean and user-friendly interface for beginners  
