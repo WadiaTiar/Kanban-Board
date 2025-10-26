@@ -1,0 +1,8 @@
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\bin\Debug\MyControls.dll
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\bin\Debug\MyControls.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.csproj.AssemblyReference.cache
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.UserControl1.resources
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.csproj.GenerateResource.cache
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.dll
+C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.pdb

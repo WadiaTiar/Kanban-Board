@@ -4,3 +4,9 @@ C:\Task Tracker Project\Project_v1\MyApp.Models\obj\Debug\MyApp.Models.csproj.As
 C:\Task Tracker Project\Project_v1\MyApp.Models\obj\Debug\MyApp.Models.csproj.CoreCompileInputs.cache
 C:\Task Tracker Project\Project_v1\MyApp.Models\obj\Debug\MyApp.Models.dll
 C:\Task Tracker Project\Project_v1\MyApp.Models\obj\Debug\MyApp.Models.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\bin\Debug\MyApp.Models.dll
+C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\bin\Debug\MyApp.Models.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.csproj.AssemblyReference.cache
+C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.csproj.CoreCompileInputs.cache
+C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.dll
+C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.pdb

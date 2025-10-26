@@ -1,0 +1,37 @@
+C:\Users\King Computer\source\repos\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.dll
+C:\Users\King Computer\source\repos\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.pdb
+C:\Users\King Computer\source\repos\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\King Computer\source\repos\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\King Computer\source\repos\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.dll
+C:\Users\King Computer\source\repos\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.pdb
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.dll
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.pdb
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.AssemblyReference.cache
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\obj\Debug\TaskTrac.417E744E.Up2Date
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.dll
+C:\Task Tracker Project\Project\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.AssemblyReference.cache
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\obj\Debug\TaskTrac.417E744E.Up2Date
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.pdb
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\bin\Debug\MyApp.Models.dll
+C:\Task Tracker Project\Project_v1\TaskTracker_BusinessLayer\bin\Debug\MyApp.Models.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.dll
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\bin\Debug\MyApp.Models.dll
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\bin\Debug\MyApp.Models.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.AssemblyReference.cache
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\obj\Debug\TaskTrac.417E744E.Up2Date
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.dll
+C:\TaskTracker_v1_Part1_TaskBoard\TaskTracker_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.pdb
