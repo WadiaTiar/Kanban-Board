@@ -33,7 +33,7 @@ KanbanBoard is a simple Windows desktop application built with **C#** that helps
 
 3. Right-click Databases → Restore Database
 
-4. Choose Device → Browse → Add → KanbanDB.bak
+4. Choose Device → Browse → Add → KanbanBoard_Database.bak
 
 5. Click OK to restore
 
