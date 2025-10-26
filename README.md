@@ -38,4 +38,4 @@ Kanban Board is a simple Windows desktop application built with **C#** that help
 5. Click OK to restore
 
 ## 👩‍💻 Author
-Wadia Tayar
+Wadia Tiar
