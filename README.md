@@ -1,6 +1,5 @@
 # Kanban Board
-
-Kanban Board is a simple Windows desktop application built with **C#** that helps users organize tasks visually using the Kanban method.
+Kanban Board is a simple Windows desktop application built with **C#** and **SQL Server** that helps users manage and organize tasks visually using the Kanban method.
 
 ## 🧩 Features
 - Create, edit, and delete tasks easily  
