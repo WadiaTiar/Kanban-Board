@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MyApp.Models;
 
-namespace TaskTracker_DataLayer
+namespace KanbanBoard_DataLayer
 {
     public class clsTask_DataAccess
     {

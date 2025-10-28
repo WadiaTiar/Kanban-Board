@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 
-namespace TaskTracker.CustomControls
+namespace KanbanBoard.CustomControls
 {
     public class RoundedLabel : Label
     {

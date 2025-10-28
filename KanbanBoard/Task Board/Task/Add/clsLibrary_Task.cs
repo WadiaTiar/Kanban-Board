@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TaskTracker.Global_Classes;
-using TaskTracker.Task;
-using TaskTracker.Task_Board.PanelTasks;
-using TaskTracker_BusinessLayer;
+using KanbanBoard.Global_Classes;
+using KanbanBoard.Task;
+using KanbanBoard.Task_Board.PanelTasks;
+using KanbanBoard_BusinessLayer;
 using static System.Net.WebRequestMethods;
 
-namespace TaskTracker.Team_Workspace.Task_Board.Task.AddTask.Controls
+namespace KanbanBoard.Task_Board.Task.AddTask.Controls
 {
     public class clsLibrary_Task
     {

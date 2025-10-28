@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using TaskTracker.Task;
-using TaskTracker_BusinessLayer;
+using KanbanBoard.Task;
+using KanbanBoard_BusinessLayer;
 
-namespace TaskTracker.Team_Workspace.Task_Board.Task.AddTask.Controls
+namespace KanbanBoard.Task_Board.Task.AddTask.Controls
 {
     public partial class ctrlTaskType : UserControl
     {

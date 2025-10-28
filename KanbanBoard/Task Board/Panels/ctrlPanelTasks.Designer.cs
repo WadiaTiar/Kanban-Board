@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Task_Board.PanelTasks
+﻿namespace KanbanBoard.Task_Board.PanelTasks
 {
     partial class ctrlPanelTasks
     {
@@ -38,7 +38,7 @@
             this.lblCreateTask = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ctrlCreateTask = new TaskTracker.Team_Workspace.Task_Board.ctrlAddTask();
+            this.ctrlCreateTask = new KanbanBoard.Task_Board.ctrlAddTask();
             this.plTitleContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -176,7 +176,7 @@
         private System.Windows.Forms.Label lblTasksSum;
         private System.Windows.Forms.Label lblPanelTitle;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Team_Workspace.Task_Board.ctrlAddTask ctrlCreateTask;
+        private Task_Board.ctrlAddTask ctrlCreateTask;
         private System.Windows.Forms.Label lblCreateTask;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

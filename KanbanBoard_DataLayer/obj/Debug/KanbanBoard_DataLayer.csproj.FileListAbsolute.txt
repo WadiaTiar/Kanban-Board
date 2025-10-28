@@ -1,0 +1,9 @@
+C:\Kanban-Board\KanbanBoard_DataLayer\bin\Debug\TaskTracker_DataLayer.dll
+C:\Kanban-Board\KanbanBoard_DataLayer\bin\Debug\TaskTracker_DataLayer.pdb
+C:\Kanban-Board\KanbanBoard_DataLayer\bin\Debug\MyApp.Models.dll
+C:\Kanban-Board\KanbanBoard_DataLayer\bin\Debug\MyApp.Models.pdb
+C:\Kanban-Board\KanbanBoard_DataLayer\obj\Debug\KanbanBoard_DataLayer.csproj.AssemblyReference.cache
+C:\Kanban-Board\KanbanBoard_DataLayer\obj\Debug\KanbanBoard_DataLayer.csproj.CoreCompileInputs.cache
+C:\Kanban-Board\KanbanBoard_DataLayer\obj\Debug\KanbanBo.B6770466.Up2Date
+C:\Kanban-Board\KanbanBoard_DataLayer\obj\Debug\TaskTracker_DataLayer.dll
+C:\Kanban-Board\KanbanBoard_DataLayer\obj\Debug\TaskTracker_DataLayer.pdb

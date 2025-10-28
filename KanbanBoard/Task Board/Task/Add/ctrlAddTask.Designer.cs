@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Team_Workspace.Task_Board
+﻿namespace KanbanBoard.Task_Board
 {
     partial class ctrlAddTask
     {
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlAddTask));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnClose = new TaskTracker.CustomControls.CircularButton();
+            this.btnClose = new KanbanBoard.CustomControls.CircularButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTaskTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             this.btnCalendar = new System.Windows.Forms.Button();
             this.btnType = new System.Windows.Forms.Button();
             this.btnPriority = new System.Windows.Forms.Button();
-            this.rlbtnSave = new TaskTracker.CustomControls.RoundedLabel();
+            this.rlbtnSave = new KanbanBoard.CustomControls.RoundedLabel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();

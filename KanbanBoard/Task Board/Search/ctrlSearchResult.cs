@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TaskTracker.Global_Classes;
-using TaskTracker_BusinessLayer;
+using KanbanBoard.Global_Classes;
+using KanbanBoard_BusinessLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-namespace TaskTracker.Team_Workspace.Task_Board.Search
+namespace KanbanBoard.Task_Board.Search
 {
     public partial class ctrlSearchResult : UserControl
     {

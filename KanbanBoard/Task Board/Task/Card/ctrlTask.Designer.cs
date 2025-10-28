@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Task
+﻿namespace KanbanBoard.Task
 {
     partial class ctrlTask
     {
@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlTask));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTagPriority = new TaskTracker.CustomControls.RoundedLabel();
+            this.lblTagPriority = new KanbanBoard.CustomControls.RoundedLabel();
             this.plEllepseContinaire = new System.Windows.Forms.Panel();
             this.lblEllipsesMore = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();

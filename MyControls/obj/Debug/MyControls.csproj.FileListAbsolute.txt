@@ -6,3 +6,9 @@ C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.csproj.Generat
 C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
 C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.dll
 C:\TaskTracker_v1_Part1_TaskBoard\MyControls\obj\Debug\MyControls.pdb
+C:\Kanban-Board\MyControls\bin\Debug\MyControls.dll
+C:\Kanban-Board\MyControls\bin\Debug\MyControls.pdb
+C:\Kanban-Board\MyControls\obj\Debug\MyControls.csproj.AssemblyReference.cache
+C:\Kanban-Board\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
+C:\Kanban-Board\MyControls\obj\Debug\MyControls.dll
+C:\Kanban-Board\MyControls\obj\Debug\MyControls.pdb

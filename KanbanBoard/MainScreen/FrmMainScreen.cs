@@ -1,18 +1,12 @@
 ﻿using MyApp.Models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
-using TaskTracker.Global_Classes;
-using TaskTracker.Task;
-using TaskTracker.Task_Board.PanelTasks;
-using TaskTracker.Team_Workspace.Task_Board.Task;
-using TaskTracker_BusinessLayer;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using KanbanBoard.Global_Classes;
+using KanbanBoard.Task;
+using KanbanBoard_BusinessLayer;
 
-namespace TaskTracker
+namespace KanbanBoard
 {
     public partial class FrmMainScreen : Form
     {

@@ -10,3 +10,9 @@ C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.csproj.Ass
 C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.csproj.CoreCompileInputs.cache
 C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.dll
 C:\TaskTracker_v1_Part1_TaskBoard\MyApp.Models\obj\Debug\MyApp.Models.pdb
+C:\Kanban-Board\MyApp.Models\bin\Debug\MyApp.Models.dll
+C:\Kanban-Board\MyApp.Models\bin\Debug\MyApp.Models.pdb
+C:\Kanban-Board\MyApp.Models\obj\Debug\MyApp.Models.csproj.AssemblyReference.cache
+C:\Kanban-Board\MyApp.Models\obj\Debug\MyApp.Models.csproj.CoreCompileInputs.cache
+C:\Kanban-Board\MyApp.Models\obj\Debug\MyApp.Models.dll
+C:\Kanban-Board\MyApp.Models\obj\Debug\MyApp.Models.pdb

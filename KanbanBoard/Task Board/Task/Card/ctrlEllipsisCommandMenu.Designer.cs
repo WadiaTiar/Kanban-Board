@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Team_Workspace.Task_Board.Task
+﻿namespace KanbanBoard.Task_Board.Task
 {
     partial class ctrlEllipsisCommandMenu
     {

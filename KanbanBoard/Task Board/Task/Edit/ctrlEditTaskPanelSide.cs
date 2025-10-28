@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using TaskTracker.Global_Classes;
-using TaskTracker.Task;
-using TaskTracker.Task_Board.PanelTasks;
-using TaskTracker.Team_Workspace.Task_Board.Search;
-using TaskTracker.Team_Workspace.Task_Board.Task.AddTask.Controls;
-using TaskTracker_BusinessLayer;
+using KanbanBoard.Global_Classes;
+using KanbanBoard.Task;
+using KanbanBoard.Task_Board.PanelTasks;
+using KanbanBoard.Task_Board.Search;
+using KanbanBoard.Task_Board.Task.AddTask.Controls;
+using KanbanBoard_BusinessLayer;
 
-namespace TaskTracker.Team_Workspace.Task_Board
+namespace KanbanBoard.Task_Board
 {
     public partial class ctrlEditTaskPanelSide : UserControl
     {

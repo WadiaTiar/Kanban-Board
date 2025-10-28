@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace TaskTracker_DataLayer
+namespace KanbanBoard_DataLayer
 {
     static class clsDataAccessSettings
     {
-        public static string ConnectionString = "Server=.;Database=TaskTracker;User Id = sa; Password=sa123456;";
+        public static string ConnectionString = "Server=.;Database=KanbanBoard;User Id = sa; Password=sa123456;";
 
 
     }

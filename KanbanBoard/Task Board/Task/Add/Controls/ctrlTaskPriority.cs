@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TaskTracker.Task;
+using KanbanBoard.Task;
 
-namespace TaskTracker.Team_Workspace.Task_Board.Task.AddTask.Controls
+namespace KanbanBoard.Task_Board.Task.AddTask.Controls
 {
     public partial class ctrlTaskPriority : UserControl
     {

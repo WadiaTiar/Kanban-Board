@@ -1,4 +1,4 @@
-﻿namespace TaskTracker
+﻿namespace KanbanBoard
 {
     partial class ctrlTasksBoard
     {
@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlTasksBoard));
-            this.cbtnSearch = new TaskTracker.CustomControls.CircularButton();
+            this.cbtnSearch = new KanbanBoard.CustomControls.CircularButton();
             this.cbDueTo = new System.Windows.Forms.ComboBox();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.cbPriority = new System.Windows.Forms.ComboBox();
-            this.rlblAddTask = new TaskTracker.CustomControls.RoundedLabel();
+            this.rlblAddTask = new KanbanBoard.CustomControls.RoundedLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.ctrlTasksList1 = new TaskTracker.Task.ctrlTasksList();
+            this.ctrlTasksList1 = new KanbanBoard.Task.ctrlTasksList();
             this.SuspendLayout();
             // 
             // cbtnSearch

@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using TaskTracker_DataLayer;
+using KanbanBoard_DataLayer;
 
-namespace TaskTracker_BusinessLayer
+namespace KanbanBoard_BusinessLayer
 {
     public class clsTask
     {

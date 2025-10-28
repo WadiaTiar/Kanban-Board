@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Team_Workspace.Task_Board.Task.AddTask.Controls
+﻿namespace KanbanBoard.Task_Board.Task.AddTask.Controls
 {
     partial class ctrlTaskPriority
     {

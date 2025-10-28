@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Task
+﻿namespace KanbanBoard.Task
 {
     partial class ctrlTasksList
     {
@@ -32,10 +32,10 @@
             this.plScrollDown = new System.Windows.Forms.Panel();
             this.plScrollAbove = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ctrlPanelTasks4 = new TaskTracker.Task_Board.PanelTasks.ctrlPanelTasks();
-            this.ctrlPanelTasks3 = new TaskTracker.Task_Board.PanelTasks.ctrlPanelTasks();
-            this.ctrlPanelTasks2 = new TaskTracker.Task_Board.PanelTasks.ctrlPanelTasks();
-            this.ctrlPanelTasks1 = new TaskTracker.Task_Board.PanelTasks.ctrlPanelTasks();
+            this.ctrlPanelTasks4 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
+            this.ctrlPanelTasks3 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
+            this.ctrlPanelTasks2 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
+            this.ctrlPanelTasks1 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 

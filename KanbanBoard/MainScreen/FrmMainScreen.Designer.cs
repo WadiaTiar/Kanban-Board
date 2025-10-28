@@ -1,4 +1,4 @@
-﻿namespace TaskTracker
+﻿namespace KanbanBoard
 {
     partial class FrmMainScreen
     {

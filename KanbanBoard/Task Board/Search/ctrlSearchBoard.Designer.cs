@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Team_Workspace.Task_Board.Search
+﻿namespace KanbanBoard.Task_Board.Search
 {
     partial class ctrlSearchBoard
     {

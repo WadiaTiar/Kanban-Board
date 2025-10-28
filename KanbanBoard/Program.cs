@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace TaskTracker
+namespace KanbanBoard
 {
     internal static class Program
     {

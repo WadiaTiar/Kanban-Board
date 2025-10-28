@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TaskTracker.CustomControls
+namespace KanbanBoard.CustomControls
 {
     public class CircularButton : Button
     {

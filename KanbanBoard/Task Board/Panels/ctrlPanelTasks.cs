@@ -2,12 +2,11 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using TaskTracker.Global_Classes;
-using TaskTracker.Task;
-using TaskTracker.Team_Workspace.Task_Board;
+using KanbanBoard.Global_Classes;
+using KanbanBoard.Task;
 
 
-namespace TaskTracker.Task_Board.PanelTasks
+namespace KanbanBoard.Task_Board.PanelTasks
 {
     public partial class ctrlPanelTasks : UserControl
     {

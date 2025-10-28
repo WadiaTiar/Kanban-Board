@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-using TaskTracker.Task;
-using TaskTracker.Task_Board.PanelTasks;
-using TaskTracker.Task_Board.Task.Card;
-using TaskTracker.Team_Workspace.Task_Board;
+using KanbanBoard.Task;
+using KanbanBoard.Task_Board.PanelTasks;
+using KanbanBoard.Task_Board.Task.Card;
+using KanbanBoard.Task_Board;
 
-namespace TaskTracker.Global_Classes
+namespace KanbanBoard.Global_Classes
 {
     public class clsUpdateDataTable
     {

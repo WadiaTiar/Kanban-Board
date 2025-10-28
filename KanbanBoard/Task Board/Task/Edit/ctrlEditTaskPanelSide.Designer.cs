@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Team_Workspace.Task_Board
+﻿namespace KanbanBoard.Task_Board
 {
     partial class ctrlEditTaskPanelSide
     {

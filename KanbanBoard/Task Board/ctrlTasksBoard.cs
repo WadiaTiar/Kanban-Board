@@ -1,23 +1,13 @@
-﻿using MyApp.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TaskTracker.Global_Classes;
-using TaskTracker.Task;
-using TaskTracker.Team_Workspace.Task_Board;
-using TaskTracker.Team_Workspace.Task_Board.Search;
-using TaskTracker.Team_Workspace.Task_Board.Task;
-using TaskTracker_BusinessLayer;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using KanbanBoard.Global_Classes;
+using KanbanBoard.Task;
+using KanbanBoard.Task_Board;
+using KanbanBoard.Task_Board.Search;
 
-namespace TaskTracker
+namespace KanbanBoard
 {
     public partial class ctrlTasksBoard : UserControl
     {

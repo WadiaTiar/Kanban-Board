@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace TaskTracker.Task_Board.Task.Card
+namespace KanbanBoard.Task_Board.Task.Card
 {
     public partial class ctrlNotification : UserControl
     {

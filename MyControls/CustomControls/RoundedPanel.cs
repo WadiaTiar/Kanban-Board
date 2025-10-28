@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 
-namespace TaskTracker.CustomControls
+namespace KanbanBoard.CustomControls
 { 
 
     public class RoundedPanel : Panel

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{31602FA1-2990-4A64-A7C3-5E641E62E52E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TaskTracker</RootNamespace>
-    <AssemblyName>TaskTracker</AssemblyName>
+    <RootNamespace>KanbanBoard</RootNamespace>
+    <AssemblyName>KanbanBoard</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -194,6 +194,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,6 +211,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\KanbanBoard_BusinessLayer\KanbanBoard_BusinessLayer.csproj">
+      <Project>{301edea4-70fa-4319-81a8-cea94ce91833}</Project>
+      <Name>KanbanBoard_BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyApp.Models\MyApp.Models.csproj">
       <Project>{e8497d95-803f-4e3f-8f52-c0c8a4e8e09e}</Project>
       <Name>MyApp.Models</Name>

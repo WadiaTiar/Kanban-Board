@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.Task_Board.Task.Card
+﻿namespace KanbanBoard.Task_Board.Task.Card
 {
     partial class ctrlNotification
     {
