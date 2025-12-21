@@ -184,9 +184,9 @@
             // 
             this.ctrlTasksList1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ctrlTasksList1.BackColor = System.Drawing.SystemColors.Control;
-            this.ctrlTasksList1.Location = new System.Drawing.Point(174, 176);
+            this.ctrlTasksList1.Location = new System.Drawing.Point(109, 181);
             this.ctrlTasksList1.Name = "ctrlTasksList1";
-            this.ctrlTasksList1.Size = new System.Drawing.Size(1746, 800);
+            this.ctrlTasksList1.Size = new System.Drawing.Size(1829, 800);
             this.ctrlTasksList1.TabIndex = 9;
             // 
             // ctrlTasksBoard
@@ -207,6 +207,7 @@
             this.Controls.Add(this.cbPriority);
             this.Name = "ctrlTasksBoard";
             this.Size = new System.Drawing.Size(1998, 1051);
+            this.Load += new System.EventHandler(this.ctrlTasksBoard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

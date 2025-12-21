@@ -1,11 +1,11 @@
-C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.dll
-C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\TaskTracker_BusinessLayer.pdb
 C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\MyApp.Models.dll
-C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\TaskTracker_DataLayer.dll
 C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\MyApp.Models.pdb
-C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\TaskTracker_DataLayer.pdb
 C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\KanbanBoard_BusinessLayer.csproj.AssemblyReference.cache
 C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\KanbanBoard_BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\KanbanBo.E9129F20.Up2Date
-C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.dll
-C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\TaskTracker_BusinessLayer.pdb
+C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\KanbanBoard_BusinessLayer.dll
+C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\KanbanBoard_BusinessLayer.pdb
+C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\KanbanBoard_DataLayer.dll
+C:\Kanban-Board\KanbanBoard_BusinessLayer\bin\Debug\KanbanBoard_DataLayer.pdb
+C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\KanbanBoard_BusinessLayer.dll
+C:\Kanban-Board\KanbanBoard_BusinessLayer\obj\Debug\KanbanBoard_BusinessLayer.pdb

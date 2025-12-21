@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KanbanBoard.Global_Classes;
+using KanbanBoard.Task_Board.PanelTasks;
 using KanbanBoard_BusinessLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
@@ -17,8 +18,6 @@ namespace KanbanBoard.Task_Board.Search
     {
         public clsTask TaskData;
         ctrlSearchBoard SearchBoard;
-
-        enum enTaskStatus { New = 0, Scheduled = 1, InProgress = 2, Completed = 3};
 
         public ctrlSearchResult(ctrlSearchBoard searchBoard)
         {
@@ -65,10 +64,11 @@ namespace KanbanBoard.Task_Board.Search
         public void LoadResultTaskCard_ShownData()
         {
             if (TaskData != null)
-            {                
+            {
+                ctrlPanelTasks panelTasks = clsGlobal.PanelsTask[TaskData.Status];
                 lblTitle.Text = TaskData.Title;
-                lblStatus.Text = ((enTaskStatus)TaskData.Status).ToString();
-                lblStatus.ImageIndex = TaskData.Status;
+                lblStatus.Text = panelTasks.StatusName;
+                pbStatusIcon.Image = Image.FromFile(panelTasks.IconPath);
             }
         }
 

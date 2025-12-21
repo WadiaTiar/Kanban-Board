@@ -21,7 +21,7 @@ namespace KanbanBoard.Task_Board.Task
         {
             InitializeComponent();
             Label LBLCompleteTask = lblCompleteTask;
-            if (task.TaskData.Status == 3)
+            if (task.TaskData.Status == 1)
             {
                 flowLayoutPanel1.Controls.Remove(lblCompleteTask);
                 this.Height = this.Height - 45;
@@ -64,16 +64,21 @@ namespace KanbanBoard.Task_Board.Task
         ctrlTaskType menuTypes;
         private void lblChangeType_Click(object sender, EventArgs e)
         {
-            menuTypes = new ctrlTaskType(_Task);
-            menuTypes.DataBack_Updated += () => 
+            if (menuTypes == null)
             {
-                _Task.BackColor = clsLibrary_Task.GetTypeColor[_Task.TaskData.TaskType_ID - 1];
-                _Task.TaskData.UpdateTaskType();
-                
-                DataBack?.Invoke();
-            };
+                menuTypes = new ctrlTaskType(_Task);
+                menuTypes.DataBack_Updated += () =>
+                {
+                    _Task.BackColor = clsLibrary_Task.GetTypeColor[_Task.TaskData.TaskType_ID - 1];
+                    _Task.TaskData.UpdateTaskType();
 
-            if (_Task.TaskData.Status == 3)
+                    DataBack?.Invoke();
+                };
+            }
+
+            menuTypes.Visible = true;
+
+            if (_Task.TaskData.Status == 1)
                 clsLibrary_Task.CreateMenu(menuTypes, this, clsLibrary_Task.enPostion.Down);
             else
                 clsLibrary_Task.CreateMenu(menuTypes, this, clsLibrary_Task.enPostion.Right);

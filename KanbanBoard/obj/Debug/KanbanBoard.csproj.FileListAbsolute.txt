@@ -3,12 +3,8 @@ C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.csproj.GenerateResource.cache
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.csproj.CoreCompileInputs.cache
 C:\Kanban-Board\KanbanBoard\bin\Debug\MyApp.Models.dll
 C:\Kanban-Board\KanbanBoard\bin\Debug\MyControls.dll
-C:\Kanban-Board\KanbanBoard\bin\Debug\TaskTracker_BusinessLayer.dll
-C:\Kanban-Board\KanbanBoard\bin\Debug\TaskTracker_DataLayer.dll
-C:\Kanban-Board\KanbanBoard\bin\Debug\TaskTracker_BusinessLayer.pdb
 C:\Kanban-Board\KanbanBoard\bin\Debug\MyApp.Models.pdb
 C:\Kanban-Board\KanbanBoard\bin\Debug\MyControls.pdb
-C:\Kanban-Board\KanbanBoard\bin\Debug\TaskTracker_DataLayer.pdb
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBo.124D032D.Up2Date
 C:\Kanban-Board\KanbanBoard\bin\Debug\KanbanBoard.exe.config
 C:\Kanban-Board\KanbanBoard\bin\Debug\KanbanBoard.exe
@@ -22,7 +18,6 @@ C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task.ctrlTasksList.resources
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Properties.Resources.resources
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.exe
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.pdb
-C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.exe.config
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Search.ctrlSearchBoard.resources
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Search.ctrlSearchResult.resources
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Task.AddTask.Controls.ctrlTaskPriority.resources
@@ -31,3 +26,59 @@ C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.ctrlAddTask.resourc
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.ctrlEditTaskPanelSide.resources
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Task.ctrlEllipsisCommandMenu.resources
 C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.FrmAddTask.resources
+C:\Kanban-Board\KanbanBoard\bin\Debug\KanbanBoard_BusinessLayer.dll
+C:\Kanban-Board\KanbanBoard\bin\Debug\KanbanBoard_DataLayer.dll
+C:\Kanban-Board\KanbanBoard\bin\Debug\KanbanBoard_BusinessLayer.pdb
+C:\Kanban-Board\KanbanBoard\bin\Debug\KanbanBoard_DataLayer.pdb
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ctrlEditStatuses.resources
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ctrlStatusElement.resources
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.exe.config
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Form1.resources
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ctrlChooseIconsFolder.resources
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings.ctrlElementMenu.resources
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings.ctrlRenameStatus.resources
+C:\Kanban-Board\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings.ctrlCreateTaskStatus.resources
+C:\Kanban-Board\KanbanBoard\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Kanban-Board\KanbanBoard\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard.exe.config
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard.exe
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard.pdb
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard_BusinessLayer.dll
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\MyApp.Models.dll
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\MyControls.dll
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard_DataLayer.dll
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard_BusinessLayer.pdb
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\MyApp.Models.pdb
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\MyControls.pdb
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\bin\Debug\KanbanBoard_DataLayer.pdb
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.csproj.AssemblyReference.cache
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.exe.config
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Form1.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.FrmMainScreen.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ctrlChooseIconsFolder.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ctrlEditStatuses.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings.ctrlCreateTaskStatus.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings.ctrlElementMenu.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings.ctrlRenameStatus.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Panels.StatusSettings.ctrlStatusElement.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Search.ctrlSearchBoard.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Search.ctrlSearchResult.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Task.AddTask.Controls.ctrlTaskPriority.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Task.AddTask.Controls.ctrlTaskType.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.ctrlAddTask.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Task.Card.ctrlNotification.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.ctrlEditTaskPanelSide.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.Task.ctrlEllipsisCommandMenu.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task_Board.FrmAddTask.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task.ctrlTask.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.ctrlTasksBoard.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Task.ctrlTasksList.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.Properties.Resources.resources
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.csproj.GenerateResource.cache
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.csproj.CoreCompileInputs.cache
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBo.124D032D.Up2Date
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.exe
+C:\Kanban-Board Version2 (MultyPanels)\KanbanBoard\obj\Debug\KanbanBoard.pdb

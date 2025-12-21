@@ -36,6 +36,10 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.9.0.10\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
@@ -53,6 +57,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="MainScreen\FrmMainScreen.cs">
       <SubType>Form</SubType>
@@ -65,6 +75,42 @@
     </Compile>
     <Compile Include="Task Board\Panels\ctrlPanelTasks.Designer.cs">
       <DependentUpon>ctrlPanelTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ctrlChooseIconsFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ctrlChooseIconsFolder.Designer.cs">
+      <DependentUpon>ctrlChooseIconsFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ctrlEditStatuses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ctrlEditStatuses.Designer.cs">
+      <DependentUpon>ctrlEditStatuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlCreateTaskStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlCreateTaskStatus.Designer.cs">
+      <DependentUpon>ctrlCreateTaskStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlElementMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlElementMenu.Designer.cs">
+      <DependentUpon>ctrlElementMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlRenameStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlRenameStatus.Designer.cs">
+      <DependentUpon>ctrlRenameStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlStatusElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlStatusElement.Designer.cs">
+      <DependentUpon>ctrlStatusElement.cs</DependentUpon>
     </Compile>
     <Compile Include="Task Board\Search\ctrlSearchBoard.cs">
       <SubType>UserControl</SubType>
@@ -141,11 +187,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreen\FrmMainScreen.resx">
       <DependentUpon>FrmMainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Task Board\Panels\ctrlPanelTasks.resx">
       <DependentUpon>ctrlPanelTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task Board\Panels\StatusSettings\ctrlChooseIconsFolder.resx">
+      <DependentUpon>ctrlChooseIconsFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task Board\Panels\StatusSettings\ctrlEditStatuses.resx">
+      <DependentUpon>ctrlEditStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlCreateTaskStatus.resx">
+      <DependentUpon>ctrlCreateTaskStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlElementMenu.resx">
+      <DependentUpon>ctrlElementMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlRenameStatus.resx">
+      <DependentUpon>ctrlRenameStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task Board\Panels\StatusSettings\ElementSettings\ctrlStatusElement.resx">
+      <DependentUpon>ctrlStatusElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Task Board\Search\ctrlSearchBoard.resx">
       <DependentUpon>ctrlSearchBoard.cs</DependentUpon>
@@ -196,6 +263,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -206,10 +275,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\KanbanBoard_BusinessLayer\KanbanBoard_BusinessLayer.csproj">
       <Project>{301edea4-70fa-4319-81a8-cea94ce91833}</Project>

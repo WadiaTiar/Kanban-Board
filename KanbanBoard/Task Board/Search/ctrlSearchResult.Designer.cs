@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlSearchResult));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pbStatusIcon = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStatusIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel1.Controls.Add(this.lblStatus, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -62,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 32);
+            this.panel1.Size = new System.Drawing.Size(385, 32);
             this.panel1.TabIndex = 1;
             // 
             // lblTitle
@@ -72,41 +73,42 @@
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(426, 32);
+            this.lblTitle.Size = new System.Drawing.Size(385, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Buy milk with choclate";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblStatus);
-            this.panel2.Location = new System.Drawing.Point(435, 3);
+            this.panel2.Controls.Add(this.pbStatusIcon);
+            this.panel2.Location = new System.Drawing.Point(394, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(151, 32);
+            this.panel2.Size = new System.Drawing.Size(46, 32);
             this.panel2.TabIndex = 2;
             // 
             // lblStatus
             // 
+            this.lblStatus.AutoEllipsis = true;
             this.lblStatus.BackColor = System.Drawing.SystemColors.Control;
             this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblStatus.ImageList = this.imageList1;
-            this.lblStatus.Location = new System.Drawing.Point(0, 0);
+            this.lblStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblStatus.Location = new System.Drawing.Point(446, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(151, 32);
+            this.lblStatus.Size = new System.Drawing.Size(140, 38);
             this.lblStatus.TabIndex = 7;
             this.lblStatus.Text = "In Progress";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // imageList1
+            // pbStatusIcon
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "NewTask_48.png");
-            this.imageList1.Images.SetKeyName(1, "Scheduled_48.png");
-            this.imageList1.Images.SetKeyName(2, "InProgress_48.png");
-            this.imageList1.Images.SetKeyName(3, "Completed_48.png");
+            this.pbStatusIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbStatusIcon.Location = new System.Drawing.Point(0, 0);
+            this.pbStatusIcon.Name = "pbStatusIcon";
+            this.pbStatusIcon.Size = new System.Drawing.Size(46, 32);
+            this.pbStatusIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbStatusIcon.TabIndex = 0;
+            this.pbStatusIcon.TabStop = false;
             // 
             // ctrlSearchResult
             // 
@@ -121,6 +123,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbStatusIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,6 +135,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pbStatusIcon;
     }
 }

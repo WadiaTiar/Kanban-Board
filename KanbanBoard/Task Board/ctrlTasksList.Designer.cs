@@ -28,91 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlTasksList));
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.plScrollDown = new System.Windows.Forms.Panel();
-            this.plScrollAbove = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ctrlPanelTasks4 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
-            this.ctrlPanelTasks3 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
-            this.ctrlPanelTasks2 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
-            this.ctrlPanelTasks1 = new KanbanBoard.Task_Board.PanelTasks.ctrlPanelTasks();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.btnEditStatusSettings = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // vScrollBar1
             // 
             this.vScrollBar1.LargeChange = 30;
-            this.vScrollBar1.Location = new System.Drawing.Point(1701, 95);
+            this.vScrollBar1.Location = new System.Drawing.Point(1757, 78);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(31, 674);
+            this.vScrollBar1.Size = new System.Drawing.Size(31, 664);
             this.vScrollBar1.SmallChange = 10;
             this.vScrollBar1.TabIndex = 5;
             this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
             // 
-            // plScrollDown
-            // 
-            this.plScrollDown.AllowDrop = true;
-            this.plScrollDown.Location = new System.Drawing.Point(15, 761);
-            this.plScrollDown.Name = "plScrollDown";
-            this.plScrollDown.Size = new System.Drawing.Size(1673, 15);
-            this.plScrollDown.TabIndex = 7;
-            this.plScrollDown.DragOver += new System.Windows.Forms.DragEventHandler(this.plScrollDown_DragOver);
-            // 
-            // plScrollAbove
-            // 
-            this.plScrollAbove.AllowDrop = true;
-            this.plScrollAbove.Location = new System.Drawing.Point(2, 62);
-            this.plScrollAbove.Name = "plScrollAbove";
-            this.plScrollAbove.Size = new System.Drawing.Size(1673, 10);
-            this.plScrollAbove.TabIndex = 8;
-            this.plScrollAbove.DragOver += new System.Windows.Forms.DragEventHandler(this.plScrollAbove_DragOver);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.plScrollAbove);
-            this.panel1.Controls.Add(this.ctrlPanelTasks4);
-            this.panel1.Controls.Add(this.ctrlPanelTasks3);
-            this.panel1.Controls.Add(this.ctrlPanelTasks2);
-            this.panel1.Controls.Add(this.ctrlPanelTasks1);
-            this.panel1.Location = new System.Drawing.Point(15, 19);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(14, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1678, 736);
+            this.panel1.Size = new System.Drawing.Size(1726, 728);
             this.panel1.TabIndex = 0;
             // 
-            // ctrlPanelTasks4
+            // flowLayoutPanel1
             // 
-            this.ctrlPanelTasks4.dataTable = null;
-            this.ctrlPanelTasks4.Location = new System.Drawing.Point(1259, 0);
-            this.ctrlPanelTasks4.Name = "ctrlPanelTasks4";
-            this.ctrlPanelTasks4.Size = new System.Drawing.Size(414, 722);
-            this.ctrlPanelTasks4.TabIndex = 12;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(762, 722);
+            this.flowLayoutPanel1.TabIndex = 14;
             // 
-            // ctrlPanelTasks3
+            // hScrollBar1
             // 
-            this.ctrlPanelTasks3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ctrlPanelTasks3.dataTable = null;
-            this.ctrlPanelTasks3.Location = new System.Drawing.Point(840, 0);
-            this.ctrlPanelTasks3.Name = "ctrlPanelTasks3";
-            this.ctrlPanelTasks3.Size = new System.Drawing.Size(414, 722);
-            this.ctrlPanelTasks3.TabIndex = 11;
+            this.hScrollBar1.Location = new System.Drawing.Point(14, 755);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(1726, 21);
+            this.hScrollBar1.TabIndex = 6;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
             // 
-            // ctrlPanelTasks2
+            // btnEditStatusSettings
             // 
-            this.ctrlPanelTasks2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ctrlPanelTasks2.dataTable = null;
-            this.ctrlPanelTasks2.Location = new System.Drawing.Point(420, 0);
-            this.ctrlPanelTasks2.Name = "ctrlPanelTasks2";
-            this.ctrlPanelTasks2.Size = new System.Drawing.Size(414, 722);
-            this.ctrlPanelTasks2.TabIndex = 10;
-            // 
-            // ctrlPanelTasks1
-            // 
-            this.ctrlPanelTasks1.dataTable = null;
-            this.ctrlPanelTasks1.Location = new System.Drawing.Point(2, 0);
-            this.ctrlPanelTasks1.Name = "ctrlPanelTasks1";
-            this.ctrlPanelTasks1.Size = new System.Drawing.Size(414, 722);
-            this.ctrlPanelTasks1.TabIndex = 13;
+            this.btnEditStatusSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnEditStatusSettings.Image")));
+            this.btnEditStatusSettings.Location = new System.Drawing.Point(1748, 18);
+            this.btnEditStatusSettings.Name = "btnEditStatusSettings";
+            this.btnEditStatusSettings.Size = new System.Drawing.Size(53, 45);
+            this.btnEditStatusSettings.TabIndex = 7;
+            this.btnEditStatusSettings.UseVisualStyleBackColor = true;
+            this.btnEditStatusSettings.Click += new System.EventHandler(this.btnEditStatusSettings_Click);
             // 
             // ctrlTasksList
             // 
@@ -120,11 +87,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.plScrollDown);
+            this.Controls.Add(this.btnEditStatusSettings);
+            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panel1);
             this.Name = "ctrlTasksList";
-            this.Size = new System.Drawing.Size(1756, 787);
+            this.Size = new System.Drawing.Size(1802, 787);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -132,12 +100,9 @@
 
         #endregion
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Panel plScrollDown;
-        private System.Windows.Forms.Panel plScrollAbove;
         private System.Windows.Forms.Panel panel1;
-        private Task_Board.PanelTasks.ctrlPanelTasks ctrlPanelTasks3;
-        private Task_Board.PanelTasks.ctrlPanelTasks ctrlPanelTasks2;
-        private Task_Board.PanelTasks.ctrlPanelTasks ctrlPanelTasks4;
-        private Task_Board.PanelTasks.ctrlPanelTasks ctrlPanelTasks1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.Button btnEditStatusSettings;
     }
 }

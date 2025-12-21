@@ -7,8 +7,8 @@
     <ProjectGuid>{301EDEA4-70FA-4319-81A8-CEA94CE91833}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaskTracker_BusinessLayer</RootNamespace>
-    <AssemblyName>TaskTracker_BusinessLayer</AssemblyName>
+    <RootNamespace>KanbanBoard_BusinessLayer</RootNamespace>
+    <AssemblyName>KanbanBoard_BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsStatus.cs" />
     <Compile Include="clsTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

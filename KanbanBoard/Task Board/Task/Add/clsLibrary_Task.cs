@@ -29,11 +29,13 @@ namespace KanbanBoard.Task_Board.Task.AddTask.Controls
                 _LoadAction = action;
             }
 
-            public FlowLayoutPanel LoadTaskCard(ctrlTask task = null, FlowLayoutPanel flp = null)
+            public FlowLayoutPanel LoadTaskCard(ctrlTask task = null)
             {
                 task.LoadTaskCard_ShownData();
                 FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
                 int Status = task.TaskData.Status;
+
+                Status = Status == 0 ? 1 : Status;// just for a while
 
                 flowLayoutPanel = clsGlobal.flpsTask[Status];
 
@@ -53,7 +55,7 @@ namespace KanbanBoard.Task_Board.Task.AddTask.Controls
                     ctrlPanelTasks panelTasks = clsGlobal.PanelsTask[_TaskData.Status];
                     panelTasks.TasksSum_Method(flowLayoutPanel, panelTasks.TaskSum_Label);
 
-                    clsGlobal.ctrlTasksList.UpdateScrollMax();
+                    clsGlobal.ctrlTasksList.UpdateScrollMax_RightSide();
                     return true;
                 }
                 else

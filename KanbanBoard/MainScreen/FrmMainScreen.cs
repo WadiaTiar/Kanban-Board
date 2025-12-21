@@ -1,10 +1,12 @@
-﻿using MyApp.Models;
+﻿using KanbanBoard.Global_Classes;
+using KanbanBoard.Task;
+using KanbanBoard.Task_Board.PanelTasks;
+using KanbanBoard_BusinessLayer;
+using MyApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using KanbanBoard.Global_Classes;
-using KanbanBoard.Task;
-using KanbanBoard_BusinessLayer;
+using static System.Net.WebRequestMethods;
 
 namespace KanbanBoard
 {
@@ -16,6 +18,7 @@ namespace KanbanBoard
         {
             InitializeComponent();
             clsGlobal.mainScreen = this;
+            clsGlobal.InitializeIconsPath();
         }
 
         private void FrmMainScreen_Load(object sender, EventArgs e)
@@ -33,15 +36,17 @@ namespace KanbanBoard
         {
             Application.RemoveMessageFilter(messageFilter);
 
+            //********Tasks Order********//
+
             List<TaskModel> taskModels = new List<TaskModel>();
 
-            for (int i = 0; i < clsGlobal.flpsTask.Count; i++)
+            foreach (KeyValuePair<int, FlowLayoutPanel> keyValuePair in clsGlobal.flpsTask)
             {
-                FlowLayoutPanel flp = clsGlobal.flpsTask[i];
+                FlowLayoutPanel flpTasks = keyValuePair.Value;
                 
-                for (int j = 0; j < flp.Controls.Count; j++)
+                for (int j = 0; j < flpTasks.Controls.Count; j++)
                 {
-                    if (flp.Controls[j] is ctrlTask task)
+                    if (flpTasks.Controls[j] is ctrlTask task)
                     {
                         taskModels.Add(new TaskModel(task.TaskData.TaskID, j));
                     }
@@ -49,22 +54,37 @@ namespace KanbanBoard
             }
         
             clsTask.UpdateTasksOrder(taskModels);
-        
+
+            //********Statuses Order********//
+
+            List<PanelTasksModel> PanelTasksModels = new List<PanelTasksModel>();
+            FlowLayoutPanel flp = clsGlobal.ctrlTasksList.panelsConatiner;
+
+            for (int j = 0; j < flp.Controls.Count; j++)
+            {
+                if (flp.Controls[j] is ctrlPanelTasks panelTasks)
+                {
+                    PanelTasksModels.Add(new PanelTasksModel(panelTasks.StatusID, j));
+                }
+            }
+
+            clsStatus.UpdateStatusesOrder(PanelTasksModels);
+
         }
 
         public static void CloseAddTaskControl()
         {
             foreach (KeyValuePair<int, FlowLayoutPanel> panel in clsGlobal.flpsTask)
             {
-                if (panel.Key == 3)
+                if (panel.Key == 1)
                     continue;
 
+                
 
                 Control BeforeLastOne = panel.Value.Controls[panel.Value.Controls.Count - 2];
-                Control lastOne = panel.Value.Controls[panel.Value.Controls.Count - 1];
-
-
                 BeforeLastOne.Visible = false;
+
+                Control lastOne = panel.Value.Controls[panel.Value.Controls.Count - 1];
                 lastOne.Visible = (panel.Value.ClientRectangle.
                 Contains(lastOne.PointToClient(Cursor.Position))) ? true : false;
 
@@ -81,7 +101,7 @@ namespace KanbanBoard
         public Control AddTaskControl = new Control();
         public Control AddTaskControl_subCtrl = new Control();
 
-        void RemoveTaskMenu(Control ctrl)
+        void ChangeToInvisible(Control ctrl)
         {
             ctrl.Visible = false;
         }
@@ -99,21 +119,21 @@ namespace KanbanBoard
                         FrmMainScreen.CloseAddTaskControl();
                 }
 
-                if (controlToMonitor != null) 
+                if (controlToMonitor != null)
                     if (!controlToMonitor.RectangleToScreen(controlToMonitor.ClientRectangle).Contains(pos))
-                        RemoveTaskMenu(controlToMonitor);
+                        ChangeToInvisible(controlToMonitor);
 
                 if(controlToMonitor_subCtrl != null)
                     if (!controlToMonitor_subCtrl.RectangleToScreen(controlToMonitor_subCtrl.ClientRectangle).Contains(pos))
-                        RemoveTaskMenu(controlToMonitor_subCtrl);
+                        ChangeToInvisible(controlToMonitor_subCtrl);
             }
 
             else if (m.Msg == WM_MOUSEWHEEL)
             {
                 if (controlToMonitor != null)
-                    RemoveTaskMenu(controlToMonitor);
+                    ChangeToInvisible(controlToMonitor);
                 if (controlToMonitor_subCtrl != null)
-                    RemoveTaskMenu(controlToMonitor_subCtrl);
+                    ChangeToInvisible(controlToMonitor_subCtrl);
 
 
                 FrmMainScreen.CloseAddTaskControl();

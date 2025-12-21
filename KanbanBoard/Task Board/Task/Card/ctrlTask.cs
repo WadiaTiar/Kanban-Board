@@ -227,7 +227,7 @@ namespace KanbanBoard.Task
 
                 ctrlPanelTasks panelTasks = clsGlobal.PanelsTask[TaskStatus];
                 panelTasks.TasksSum_Method(flp, panelTasks.TaskSum_Label);
-                TasksList.UpdateScrollMax();
+                TasksList.UpdateScrollMax_RightSide();
                 return true;
             }
             else
@@ -253,12 +253,16 @@ namespace KanbanBoard.Task
             }
         }
 
-        private void lblEllipsesMore_Click(object sender, EventArgs e)
+        private void lblEllipsesMore_MouseClick(object sender, MouseEventArgs e)
         {
-            _Menu = new ctrlEllipsisCommandMenu(this);
-            _Menu.DataBack += () => { _Menu.Visible = false; };
-            clsLibrary_Task.CreateMenu(_Menu, lblEllipsesMore, clsLibrary_Task.enPostion.Right);
+            if (_Menu == null)
+            {
+                _Menu = new ctrlEllipsisCommandMenu(this);
+                _Menu.DataBack += () => { _Menu.Visible = false; };
+            }
 
+            _Menu.Visible = true;
+            clsLibrary_Task.CreateMenu(_Menu, lblEllipsesMore, clsLibrary_Task.enPostion.Right);
             clsGlobal.mainScreen.messageFilter.controlToMonitor = _Menu;
         }
     }

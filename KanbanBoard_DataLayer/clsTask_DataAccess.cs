@@ -26,14 +26,10 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"
-                    INSERT INTO Task 
-                    (Title, Description, TaskType_ID, Status, Priority, CreatedDate, LastUpdatedDate, DueDate, CompletedDate, IsDeleted, TaskIndex_Panel)
-                    VALUES (@Title, @Description, @TaskType_ID, @Status, @Priority, @CreatedDate, @LastUpdatedDate, @DueDate, @CompletedDate, @IsDeleted, @TaskIndex_Panel);
-                    SELECT SCOPE_IDENTITY();";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand("SP_AddNewTask", connection))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         command.Parameters.AddWithValue("@Title", Title);
                         command.Parameters.AddWithValue("@Description", string.IsNullOrEmpty(Description) ? (object)DBNull.Value : Description);
                         command.Parameters.AddWithValue("@TaskType_ID", TaskType_ID);
@@ -47,15 +43,17 @@ namespace KanbanBoard_DataLayer
                         command.Parameters.AddWithValue("@TaskIndex_Panel", 0);
 
 
+                        SqlParameter OutputIDParamater = new SqlParameter("@NewTaskID", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+
+                        command.Parameters.Add(OutputIDParamater);
 
                         connection.Open();
+                        command.ExecuteNonQuery();
 
-                        object result = command.ExecuteScalar();
-
-                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
-                        {
-                            TaskID = insertedID;
-                        }
+                        TaskID = (int)command.Parameters["@NewTaskID"].Value;
                     }
                 }
             }
@@ -83,21 +81,10 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"
-                    UPDATE Task
-                    SET Title = @Title,
-                    Description = @Description,
-                    TaskType_ID = @TaskType_ID,
-                    Status = @Status,
-                    Priority = @Priority,
-                    LastUpdatedDate = @LastUpdatedDate,
-                    DueDate = @DueDate,
-                    CompletedDate = @CompletedDate
-                    WHERE Task_ID = @TaskID";
-
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand("SP_UpdateTask", connection))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         command.Parameters.AddWithValue("@Title", Title);
                         command.Parameters.AddWithValue("@Description", string.IsNullOrEmpty(Description) ? (object)DBNull.Value : Description);
                         command.Parameters.AddWithValue("@Status", Status);
@@ -132,16 +119,10 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"
-                    UPDATE Task
-                    SET 
-                    TaskType_ID = @TaskType_ID,
-                    LastUpdatedDate = @LastUpdatedDate
-                    WHERE Task_ID = @TaskID";
-
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand("SP_UpdateTaskType", connection))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         command.Parameters.AddWithValue("@TaskType_ID", TaskType_ID);
                         command.Parameters.AddWithValue("@LastUpdatedDate", DateTime.Now);
                         command.Parameters.AddWithValue("@TaskID", TaskID);
@@ -171,15 +152,10 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"
-                UPDATE Task
-                SET Status = @Status,
-                 LastUpdatedDate = @LastUpdatedDate
-                 WHERE Task_ID = @TaskID";
-
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand("SP_UpdateTaskStatus", connection))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         command.Parameters.AddWithValue("@Status", Status);
                         command.Parameters.AddWithValue("@LastUpdatedDate", DateTime.Now);
                         command.Parameters.AddWithValue("@TaskID", TaskID);
@@ -209,12 +185,10 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"select * from Task
-                    where task.IsDeleted = 0
-                    order by Task.Status asc, Task.TaskIndex_Panel desc";// you have to switch there order to desc
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand("SP_GetAllTasks", connection))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         connection.Open();
 
                         using (SqlDataReader reader = command.ExecuteReader())
@@ -244,16 +218,10 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"
-                    UPDATE Task
-                    SET IsDeleted = @IsDeleted,
-                    TaskIndex_Panel = @TaskIndex_Panel,
-                    LastUpdatedDate = @LastUpdatedDate
-                    WHERE Task_ID = @TaskID";
-
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand("SP_DeleteTask", connection))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         command.Parameters.AddWithValue("@IsDeleted", 1);
                         command.Parameters.AddWithValue("@LastUpdatedDate", DateTime.Now);
                         command.Parameters.AddWithValue("@TaskIndex_Panel", 0);
@@ -279,18 +247,16 @@ namespace KanbanBoard_DataLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"UPDATE Task 
-                    SET TaskIndex_Panel = @Index
-                    WHERE Task_ID = @TaskID";
-
                     connection.Open();
 
                     foreach (var task in tasks)   // loop rows
                     {
-                        using (SqlCommand command = new SqlCommand(query, connection))
+                        using (SqlCommand command = new SqlCommand("SP_UpdateTasksOrder", connection))
                         {
+                            command.CommandType = CommandType.StoredProcedure;
+
                             command.Parameters.AddWithValue("@TaskID", task.TaskID);
-                            command.Parameters.AddWithValue("@Index", task.TaskIndex_Panel);
+                            command.Parameters.AddWithValue("@TaskIndex_Panel", task.TaskIndex_Panel);
 
                             command.ExecuteNonQuery();
                         }

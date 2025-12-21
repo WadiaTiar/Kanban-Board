@@ -4,28 +4,55 @@ using System.Drawing;
 using System.Windows.Forms;
 using KanbanBoard.Global_Classes;
 using KanbanBoard.Task;
+using System.Configuration;
 
 
 namespace KanbanBoard.Task_Board.PanelTasks
 {
     public partial class ctrlPanelTasks : UserControl
     {
-        public DataTable dataTable {  get; set; }
-        public Label CreateNewTaskLabel { get { return lblCreateTask; } }
+        // Declare a delegate
+        public delegate void DataBackEventHandler_Scroll(bool IsUp);
 
-        public FlowLayoutPanel flowLayoutPanel { get { return flowLayoutPanel1;  } }
+        // Declare an event using the delegate
+        public event DataBackEventHandler_Scroll DataBack_Scroll;
 
-        public Label TaskSum_Label { get { return lblTasksSum; } }
+        public int StatusID { get; set; }
 
-        public ctrlAddTask CreateTaskUC { get { return ctrlCreateTask; } }
+        public FlowLayoutPanel flowLayoutPanel { get { return flowLayoutPanel1; } }
 
-        public System.Windows.Forms.Panel plTilteContainer { get { return plTitleContainer1; } }
+        public Label TaskSum_Label { get { return lblTasksSum; } set { lblTasksSum.Text = value.Text; } }
 
-        public Label PanelTitleLabel 
+        private string _IconPath = null;
+        public string IconPath 
+        { 
+            get 
+            {
+                if (_IconPath == null)
+                    _IconPath = ConfigurationManager.AppSettings["DefaultStatusIcon"];
+
+
+                return _IconPath; 
+            } 
+            set 
+            { 
+                _IconPath = value;
+                pbStatusIcon.Image = Image.FromFile(value);
+            } 
+        }
+
+        private string _StatusName;
+        public string StatusName 
         {
             get 
             {
-                return lblPanelTitle;
+                return _StatusName;
+            }
+
+            set 
+            {
+                lblStatusTitle.Text = value;
+                _StatusName = value;
             }
         }
 
@@ -34,6 +61,13 @@ namespace KanbanBoard.Task_Board.PanelTasks
         public ctrlPanelTasks()
         {
             InitializeComponent();
+
+            ctrlAddTask1.Visible = false;
+            lblCreateTask.Visible = false;
+
+            pbStatusIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+            plScrollAbove.DragOver += (s, e) => {DataBack_Scroll?.Invoke(true); };
+            plScrollDown.DragOver += (s, e) => {DataBack_Scroll?.Invoke(false); };
         }
 
         private void Panel_DragEnter(object sender, DragEventArgs e)
@@ -51,9 +85,10 @@ namespace KanbanBoard.Task_Board.PanelTasks
         private void Panel_DragDrop(object sender, DragEventArgs e)
         {
             ctrlTask Task = null;
-            ctrlAddTask BeforeLastControl = ctrlCreateTask;
             if (e.Data.GetDataPresent(typeof(ctrlTask)))
             {
+                ctrlAddTask BeforeLastControl = ctrlAddTask1;
+
                 Task = (ctrlTask)e.Data.GetData(typeof(ctrlTask));
                 FlowLayoutPanel targetPanel = sender as FlowLayoutPanel;
                 FlowLayoutPanel sourcePanel = Task.Parent as FlowLayoutPanel;
@@ -112,9 +147,9 @@ namespace KanbanBoard.Task_Board.PanelTasks
 
                 lastControl = null;
 
-                TasksSum_Method(sourcePanel, lblTasksSum);
+                TasksSum_Method(sourcePanel, clsGlobal.PanelsTask[Convert.ToInt32(sourcePanel.Tag)].TaskSum_Label);
 
-                TasksSum_Method(targetPanel, clsGlobal.PanelsTask[Convert.ToInt32(targetPanel.Tag)].lblTasksSum);
+                TasksSum_Method(targetPanel, lblTasksSum);
             }
         }
 
@@ -198,7 +233,6 @@ namespace KanbanBoard.Task_Board.PanelTasks
                 {
                     ++Count;
                 }
-
             }
 
             lblTaskCount.Text = Count.ToString();
@@ -209,23 +243,16 @@ namespace KanbanBoard.Task_Board.PanelTasks
             flowLayoutPanel1.AllowDrop = true;
             flowLayoutPanel1.DragEnter += Panel_DragEnter;
             flowLayoutPanel1.DragDrop += Panel_DragDrop;
+            ctrlAddTask1.Tag = StatusID;
+            lblCreateTask.Tag = StatusID;
 
-            if (Convert.ToInt32(flowLayoutPanel1.Tag) != 3)
+            if (Convert.ToInt32(flowLayoutPanel1.Tag) != 1)
             {
                 flowLayoutPanel1.MouseEnter += flowLayoutPanel_MouseEnter;
                 flowLayoutPanel1.MouseLeave += flowLayoutPanel_MouseLeave;
             }
-        }
-    
-        public void InitializePanel(int _Tag, string _Title)
-        {
-            PanelTitleLabel.Text = _Title;
-            flowLayoutPanel.Tag = _Tag;
-            CreateTaskUC.Tag = _Tag;
-            PanelTitleLabel.Image = imageList1.Images[_Tag];
 
-            CreateTaskUC.Visible = false;
-            lblCreateTask.Visible = false;
+            TasksSum_Method(flowLayoutPanel1, lblTasksSum);
         }
     }
 }

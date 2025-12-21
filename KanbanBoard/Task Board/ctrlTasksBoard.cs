@@ -19,9 +19,9 @@ namespace KanbanBoard
         {
             InitializeComponent();
 
-            cbPriority.SelectedIndex = 0;
-            cbType.SelectedIndex = 0;
-            cbDueTo.SelectedIndex = 0;
+            //cbPriority.SelectedIndex = 0;
+            //cbType.SelectedIndex = 0;
+            //cbDueTo.SelectedIndex = 0;
 
 
             clsGlobal.ctrlTasksBoard = this;
@@ -247,6 +247,13 @@ namespace KanbanBoard
             }
 
             ctrlTasksList1.RefreshPanelsFram();
+        }
+
+        private void ctrlTasksBoard_Load(object sender, EventArgs e)
+        {
+            cbPriority.SelectedIndex = 0;
+            cbType.SelectedIndex = 0;
+            cbDueTo.SelectedIndex = 0;
         }
     }
 }

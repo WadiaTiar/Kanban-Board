@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using KanbanBoard.Global_Classes;
-using KanbanBoard.Task;
 using KanbanBoard.Task_Board.Task.AddTask.Controls;
 using KanbanBoard_BusinessLayer;
 

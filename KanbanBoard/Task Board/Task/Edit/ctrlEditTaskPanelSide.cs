@@ -116,7 +116,7 @@ namespace KanbanBoard.Task_Board
             Type = cbType.SelectedIndex + 1;
             Priority = cbPriority.SelectedIndex;
             PreviousTaskStatus = TaskCard.TaskData.Status;//To knew its previous status
-            Status = cbStatus.SelectedIndex;
+            Status = cbStatus.SelectedIndex + 1;
 
             if (rbAssignDueTo.Checked)
                 DueDate = dtpDueTo.Value;
@@ -143,7 +143,7 @@ namespace KanbanBoard.Task_Board
                 ctrlPanelTasks panelTasks = clsGlobal.PanelsTask[Status];
                 panelTasks.TasksSum_Method(panelTasks.flowLayoutPanel, panelTasks.TaskSum_Label);
 
-                clsGlobal.ctrlTasksList.UpdateScrollMax();
+                clsGlobal.ctrlTasksList.UpdateScrollMax_RightSide();
             }
             else
             {

@@ -1,67 +1,170 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using KanbanBoard.Global_Classes;
+﻿using KanbanBoard.Global_Classes;
+using KanbanBoard.Task_Board;
+using KanbanBoard.Task_Board.Panels.StatusSettings;
+using KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings;
 using KanbanBoard.Task_Board.PanelTasks;
 using KanbanBoard.Task_Board.Task.AddTask.Controls;
 using KanbanBoard_BusinessLayer;
-
-
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace KanbanBoard.Task
 {
     public partial class ctrlTasksList : UserControl
     {
-        void InitializePanels()
-        {
-            ctrlPanelTasks1.InitializePanel(0, "New Task");
-            ctrlPanelTasks2.InitializePanel(1, "Scheduled");
-            ctrlPanelTasks3.InitializePanel(2, "In Progress");
-            ctrlPanelTasks4.InitializePanel(3, "Completed");
-
-            ctrlPanelTasks4.flowLayoutPanel.Controls.Clear();
-        }
-
-
         public DataTable dtTasks;
         public ctrlTasksBoard tasksBoard;
+        public FlowLayoutPanel panelsConatiner{ get{ return flowLayoutPanel1; }  }
+
+        public int hScroll_Value 
+        {
+            get 
+            {
+                return hScrollBar1.Value; 
+            }
+            set 
+            {
+                if (hScrollBar1.Value > value)
+                {
+                    hScrollBar1.Value = value;
+                    hScrollBar1_Scroll();
+                }
+            } 
+        }
+        public int vScroll_Value 
+        { 
+            get 
+            {
+                return vScrollBar1.Value; 
+            }
+            set 
+            {
+                if (vScrollBar1.Value > value)
+                {
+                    vScrollBar1.Value = value;
+                    _Scroll_vScrollBar();
+                }
+            }
+        }
+
         public ctrlTasksList()
         {
             InitializeComponent();
-            InitializePanels();
 
-
-            clsGlobal.PanelsTask = new Dictionary<int, ctrlPanelTasks> 
-            {
-                { 0, ctrlPanelTasks1 },
-                { 1, ctrlPanelTasks2 },
-                { 2, ctrlPanelTasks3 },
-                { 3, ctrlPanelTasks4 }
-            };
-            clsGlobal.flpsTask = new Dictionary<int, FlowLayoutPanel>
-            {
-                { 0, ctrlPanelTasks1.flowLayoutPanel },
-                { 1, ctrlPanelTasks2.flowLayoutPanel },
-                { 2, ctrlPanelTasks3.flowLayoutPanel },
-                { 3, ctrlPanelTasks4.flowLayoutPanel }
-            };
-            
-
-            clsGlobal.lblCountControlsInPanels = new[] { ctrlPanelTasks1.TaskSum_Label, ctrlPanelTasks2.TaskSum_Label
-                , ctrlPanelTasks3.TaskSum_Label, ctrlPanelTasks4.TaskSum_Label};
-
-            vScrollBar1.MouseWheel += _Scroll;
+            vScrollBar1.MouseWheel += _Scroll_vScrollBar;
             this.MouseWheel += ScrollInList;
         }
 
-        public void _Scroll(object sender = null, EventArgs e = null)
+        public void LoadPanels()
         {
-            ctrlPanelTasks1.flowLayoutPanel.Top = -vScrollBar1.Value;
-            ctrlPanelTasks2.flowLayoutPanel.Top = -vScrollBar1.Value;
-            ctrlPanelTasks3.flowLayoutPanel.Top = -vScrollBar1.Value;
-            ctrlPanelTasks4.flowLayoutPanel.Top = -vScrollBar1.Value;
+            try
+            {
+                DataRowCollection rows = clsStatus.GetAllStatuses().Rows;
+                
+                clsGlobal.EditStatuses = new ctrlEditStatuses();
+
+                foreach (DataRow row in rows)
+                { 
+                    ctrlPanelTasks panelTasks = new ctrlPanelTasks();                                       
+                    panelTasks.StatusID = Convert.ToInt32(row["StatusID"]);
+                    if (panelTasks.StatusID == 1)
+                    {
+                        panelTasks.flowLayoutPanel.Controls.Clear();
+                    }
+
+                    panelTasks.StatusName = Convert.ToString(row["StatusName"]);
+
+                    string IconPath = Convert.ToString(row["IconPath"]);
+                    if (File.Exists(IconPath))
+                    {
+                        panelTasks.IconPath = IconPath;
+                    }
+
+
+                    AddPanel_InProgram(panelTasks);
+                    clsGlobal.EditStatuses.AddStatusElement(panelTasks.StatusID, panelTasks.StatusName,panelTasks.IconPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+        
+        public void AddPanel_InProgram(ctrlPanelTasks panelTasks)
+        {
+            int StatusID = panelTasks.StatusID;
+
+            panelTasks.DataBack_Scroll += (bool IsUp) => plScroll(IsUp);
+            flowLayoutPanel1.Size = new Size(flowLayoutPanel1.Width + panelTasks.Width, flowLayoutPanel1.Height);
+            flowLayoutPanel1.Controls.Add(panelTasks);
+
+            clsGlobal.PanelsTask.Add(StatusID, panelTasks);
+            panelTasks.flowLayoutPanel.Tag = panelTasks.StatusID;
+            clsGlobal.flpsTask.Add(StatusID, panelTasks.flowLayoutPanel);
+            clsGlobal.lblCountControlsInPanels.Add(StatusID, panelTasks.TaskSum_Label);
+        }
+
+        public bool AddPanel_InDatabase(ref int StatusID, string StatusName, string IconPath)
+        {
+            clsStatus Status = clsStatus.AddNewStatus(StatusName, IconPath);
+            if (Status.Save())
+            {
+                StatusID = Status.StatusID;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool CreateNewStatus(string StatusName, string IconPath)
+        {
+            int StatusID = -1;
+
+            ctrlPanelTasks panelTasks = new ctrlPanelTasks();
+            panelTasks.IconPath = IconPath;
+            panelTasks.StatusName = StatusName;
+
+            if (AddPanel_InDatabase(ref StatusID, StatusName, IconPath))
+            {
+                panelTasks.StatusID = StatusID;
+                AddPanel_InProgram(panelTasks);
+
+                if (panelsConatiner.Controls.Count >= 2)
+                {
+                    int Index = panelsConatiner.Controls.GetChildIndex(panelTasks);
+                    panelsConatiner.Controls.SetChildIndex(panelTasks, Index - 1);
+                }
+
+                UpdateScrollMax_DownSide();
+
+                clsGlobal.EditStatuses.AddStatusElement(StatusID, StatusName, IconPath);
+                clsGlobal.Notification("A new task status has been created", Color.Green);
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("The Panel doesn't Saved and created, find the error!", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public void _Scroll_vScrollBar(object sender = null, EventArgs e = null)
+        {
+            foreach(FlowLayoutPanel flp in clsGlobal.flpsTask.Values)
+            {
+                flp.Top = -vScrollBar1.Value;
+            }
+        }
+
         void ScrollInList(Object sender, MouseEventArgs e)
         {
             if (e.Delta > 0)
@@ -80,22 +183,24 @@ namespace KanbanBoard.Task
             }
 
 
-            _Scroll();
+            _Scroll_vScrollBar();
         }
 
         public void RefreshPanelsFram()
         {
             TasksCountInEachPanel();
-            UpdateScrollMax();
+            UpdateScrollMax_RightSide();
+            UpdateScrollMax_DownSide();
         }
 
         void TasksCountInEachPanel()
         {
-            for (int i = 0; i <= 3; i++)
+            foreach(KeyValuePair<int, FlowLayoutPanel> keyValuePair in clsGlobal.flpsTask)
             {
-                var panel = clsGlobal.flpsTask[i];
                 int Count = 0;
-                foreach (Control ctrl in panel.Controls)
+                FlowLayoutPanel flp = keyValuePair.Value;
+
+                foreach (Control ctrl in flp.Controls)
                 {
                     if ((ctrl is ctrlTask) && ctrl.Visible)
                     {
@@ -104,22 +209,23 @@ namespace KanbanBoard.Task
 
                 }
 
-                clsGlobal.lblCountControlsInPanels[i].Text = Count.ToString();
+                clsGlobal.lblCountControlsInPanels[keyValuePair.Key].Text = Count.ToString();
             }
         }
 
         public void RefreshBoard()
         {
+            LoadPanels();
             LoadTaskCards();
             RefreshPanelsFram();
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            _Scroll();
+            _Scroll_vScrollBar();
         }
 
-        public void UpdateScrollMax()
+        public void UpdateScrollMax_RightSide()
         {
             int MaxContentHeight = 0;
             foreach (KeyValuePair<int, FlowLayoutPanel> panel in clsGlobal.flpsTask)
@@ -146,9 +252,32 @@ namespace KanbanBoard.Task
             vScrollBar1.SmallChange = 20;
             if (vScrollBar1.Value > vScrollBar1.Maximum) vScrollBar1.Value = vScrollBar1.Maximum;
 
-
-
             vScrollBar1.Refresh();
+        }
+
+        public void UpdateScrollMax_DownSide()
+        {
+            int MaxPanelWidth = 0;
+            foreach (KeyValuePair<int, ctrlPanelTasks> keyValuePair in clsGlobal.PanelsTask)
+            {
+                MaxPanelWidth += keyValuePair.Value.Width + flowLayoutPanel1.Margin.Horizontal;
+            }
+
+
+            hScrollBar1.Minimum = 0;
+            if (MaxPanelWidth != 0)
+                hScrollBar1.Maximum = MaxPanelWidth - 700;
+            else
+                hScrollBar1.Maximum = 0;
+
+
+            hScrollBar1.LargeChange = panel1.ClientSize.Height;
+            hScrollBar1.SmallChange = 20;
+            //if (hScrollBar1.Value > hScrollBar1.Maximum) hScrollBar1.Value = hScrollBar1.Maximum;
+
+            hScrollBar1.Value = hScrollBar1.Minimum;
+            hScrollBar1_Scroll();
+            hScrollBar1.Refresh();
         }
 
         //this related with refresh Method
@@ -158,7 +287,7 @@ namespace KanbanBoard.Task
             dtTasks = clsTask.GetAllTasks();
             if (dtTasks == null)
             {
-                MessageBox.Show("There isn't data in database!", "Data", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("There aren't tasks in database!", "Data", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -179,24 +308,50 @@ namespace KanbanBoard.Task
         }
 
         int scrollSpeed = 5;
-        private void plScrollAbove_DragOver(object sender, DragEventArgs e)
+        
+        private void plScrollAbove_DragOver()
         {
             if (vScrollBar1.Value > vScrollBar1.Minimum)
             {
                 vScrollBar1.Value = Math.Max(vScrollBar1.Value - scrollSpeed, vScrollBar1.Minimum);
-                vScrollBar1_Scroll(null, null);
+                _Scroll_vScrollBar();
             }
-
         }
-
-        private void plScrollDown_DragOver(object sender, DragEventArgs e)
+        
+        private void plScrollDown_DragOver()
         {
             if (vScrollBar1.Value < vScrollBar1.Maximum)
             {
                 vScrollBar1.Value = Math.Min(vScrollBar1.Value + scrollSpeed, vScrollBar1.Maximum);
-                vScrollBar1_Scroll(null, null);
+                _Scroll_vScrollBar();
             }
+        }
 
+        private void plScroll(bool IsUp)
+        {
+            if (IsUp)
+                plScrollAbove_DragOver();
+            else
+                plScrollDown_DragOver();
+        }
+
+        private void hScrollBar1_Scroll(object sender = null, ScrollEventArgs e = null)
+        {
+            flowLayoutPanel1.Left = -hScrollBar1.Value;
+        }
+
+        private void btnEditStatusSettings_Click(object sender, EventArgs e)
+        {
+            ctrlEditStatuses editStatuses = clsGlobal.EditStatuses;
+
+            editStatuses.Location = new Point((this.Width - editStatuses.Width) / 2,
+                (this.Height - editStatuses.Height) / 4);
+
+            this.Controls.Add(editStatuses);
+
+
+            editStatuses.Visible = true;
+            editStatuses.BringToFront();
         }
     }
 }

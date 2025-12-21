@@ -152,10 +152,10 @@
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
+            "Compeleted",
             "New",
             "Scheduled",
-            "In Progress",
-            "Compeleted"});
+            "In Progress"});
             this.cbStatus.Location = new System.Drawing.Point(118, 88);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(187, 30);

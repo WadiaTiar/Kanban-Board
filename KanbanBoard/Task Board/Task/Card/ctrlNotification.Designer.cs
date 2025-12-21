@@ -31,24 +31,27 @@
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.plNotifyColor = new System.Windows.Forms.Panel();
-            this.lblNotificationText = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNotificationText = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.339192F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.6608F));
             this.tableLayoutPanel1.Controls.Add(this.plNotifyColor, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblNotificationText, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(569, 54);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 54);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // plNotifyColor
@@ -56,45 +59,59 @@
             this.plNotifyColor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plNotifyColor.Location = new System.Drawing.Point(3, 3);
             this.plNotifyColor.Name = "plNotifyColor";
-            this.plNotifyColor.Size = new System.Drawing.Size(13, 48);
+            this.plNotifyColor.Size = new System.Drawing.Size(17, 48);
             this.plNotifyColor.TabIndex = 0;
-            // 
-            // lblNotificationText
-            // 
-            this.lblNotificationText.AutoSize = true;
-            this.lblNotificationText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(90)))), ((int)(((byte)(80)))));
-            this.lblNotificationText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNotificationText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotificationText.Location = new System.Drawing.Point(22, 0);
-            this.lblNotificationText.Name = "lblNotificationText";
-            this.lblNotificationText.Size = new System.Drawing.Size(544, 54);
-            this.lblNotificationText.TabIndex = 1;
-            this.lblNotificationText.Text = "Notification text";
-            this.lblNotificationText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.lblNotificationText);
+            this.panel1.Location = new System.Drawing.Point(26, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(182, 38);
+            this.panel1.TabIndex = 1;
+            // 
+            // lblNotificationText
+            // 
+            this.lblNotificationText.AutoSize = true;
+            this.lblNotificationText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(90)))), ((int)(((byte)(80)))));
+            this.lblNotificationText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotificationText.Location = new System.Drawing.Point(3, 9);
+            this.lblNotificationText.Name = "lblNotificationText";
+            this.lblNotificationText.Size = new System.Drawing.Size(176, 29);
+            this.lblNotificationText.TabIndex = 2;
+            this.lblNotificationText.Text = "Notification text";
+            this.lblNotificationText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ctrlNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(90)))), ((int)(((byte)(80)))));
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ctrlNotification";
-            this.Size = new System.Drawing.Size(569, 54);
+            this.Size = new System.Drawing.Size(696, 54);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel plNotifyColor;
-        private System.Windows.Forms.Label lblNotificationText;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblNotificationText;
     }
 }

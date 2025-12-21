@@ -95,7 +95,7 @@
             this.lblEllipsesMore.Name = "lblEllipsesMore";
             this.lblEllipsesMore.Size = new System.Drawing.Size(25, 25);
             this.lblEllipsesMore.TabIndex = 11;
-            this.lblEllipsesMore.Click += new System.EventHandler(this.lblEllipsesMore_Click);
+            this.lblEllipsesMore.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEllipsesMore_MouseClick);
             // 
             // lblTitle
             // 
