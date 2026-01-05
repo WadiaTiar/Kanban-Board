@@ -66,7 +66,7 @@ namespace KanbanBoard.Task_Board
             cbPriority.SelectedIndex = TaskData.Priority;
             cbPriority.BackColor = clsLibrary_Task.GetPriorityColor[cbPriority.SelectedIndex];
 
-            cbStatus.SelectedIndex = TaskData.Status;
+            cbStatus.SelectedIndex = TaskData.Status - 1;
 
 
             //DueTo Date
@@ -157,7 +157,7 @@ namespace KanbanBoard.Task_Board
                     txtTaskTitle.Text != OriginalTaskData.Title ||
                     txtTaskDescription.Text != OriginalTaskData.Description ||
                     cbType.SelectedIndex != (OriginalTaskData.TaskType_ID - 1) ||
-                    cbStatus.SelectedIndex != OriginalTaskData.Status ||
+                    cbStatus.SelectedIndex != OriginalTaskData.Status - 1 ||
                     cbPriority.SelectedIndex != OriginalTaskData.Priority ||
                         
                     (

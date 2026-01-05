@@ -1,0 +1,47 @@
+Notes:
+---------------------------------------1-----------------------------------
+This project (Kanban Board) is considered the version-2.
+
+
+
+
+
+---------------------------------------2-----------------------------------
+# **Instruction: Update Column with Random Dates**
+
+## **Purpose**
+Update all rows in the `[OrderDate]` column with **different random dates** between January 1, 2023 and December 31, 2023.
+
+## **SQL Query to Execute**
+
+DECLARE @StartDate DATE = '2023-01-01';
+DECLARE @EndDate DATE = '2023-12-31';
+DECLARE @DaysRange INT = DATEDIFF(DAY, @StartDate, @EndDate);
+
+UPDATE Orders
+SET OrderDate = DATEADD(DAY, 
+    ABS(CHECKSUM(NEWID())) % (@DaysRange + 1),  -- 0 to 365 days
+    @StartDate
+);
+
+
+
+## **What It Does**
+- ✅ Sets **different random dates** for each row
+- ✅ Dates range from `@StartDate` to `@EndDate` (inclusive)
+- ✅ Uses `NEWID()` for **true random per row** (not `RAND()`)
+- ✅ `ABS(CHECKSUM(NEWID())) % ...` ensures positive integers
+
+## **To Modify**
+1. Change `@StartDate` and `@EndDate` for different ranges
+2. Replace `Orders` with your table name
+3. Replace `OrderDate` with your column name
+
+## **Warning**
+⚠️ **This UPDATE cannot be undone!** Consider backing up first:
+```sql
+-- Backup suggestion
+SELECT * INTO Orders_Backup FROM Orders;
+```
+
+**Run once to populate dates with random values between 2023-01-01 and 2023-12-31.**

@@ -72,7 +72,7 @@ namespace KanbanBoard.Task_Board.Panels.StatusSettings
                 }                
             }
             else
-                MessageBox.Show("The new icon doesn't saved Successfully!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The icon of status doesn't change yet.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

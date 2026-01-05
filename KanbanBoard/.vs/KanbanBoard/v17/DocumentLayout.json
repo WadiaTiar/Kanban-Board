@@ -1,10 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Kanban-Board Version2 (MultyPanels)\\KanbanBoard\\",
+  "WorkspaceRootPath": "C:\\Kanban-Board\\KanbanBoard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|C:\\Kanban-Board Version2 (MultyPanels)\\KanbanBoard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|c:\\kanban-board\\kanbanboard\\task board\\panels\\statussettings\\elementsettings\\ctrlelementmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:task board\\panels\\statussettings\\elementsettings\\ctrlelementmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|c:\\kanban-board\\kanbanboard\\task board\\panels\\statussettings\\ctrleditstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:task board\\panels\\statussettings\\ctrleditstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|c:\\kanban-board\\kanbanboard\\task board\\panels\\statussettings\\elementsettings\\ctrlcreatetaskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:task board\\panels\\statussettings\\elementsettings\\ctrlcreatetaskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|c:\\kanban-board\\kanbanboard\\task board\\panels\\statussettings\\ctrleditstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:task board\\panels\\statussettings\\ctrleditstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|c:\\kanban-board\\kanbanboard\\task board\\panels\\statussettings\\elementsettings\\ctrlstatuselement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:task board\\panels\\statussettings\\elementsettings\\ctrlstatuselement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|c:\\kanban-board\\kanbanboard\\task board\\task\\edit\\ctrledittaskpanelside.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31602FA1-2990-4A64-A7C3-5E641E62E52E}|KanbanBoard.csproj|solutionrelative:task board\\task\\edit\\ctrledittaskpanelside.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +46,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Kanban-Board Version2 (MultyPanels)\\KanbanBoard\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Kanban-Board Version2 (MultyPanels)\\KanbanBoard\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ctrlStatusElement.cs",
+              "DocumentMoniker": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlStatusElement.cs",
+              "RelativeDocumentMoniker": "Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlStatusElement.cs",
+              "ToolTip": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlStatusElement.cs",
+              "RelativeToolTip": "Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlStatusElement.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:45:15.336Z",
+              "WhenOpened": "2026-01-05T03:39:39.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ctrlElementMenu.cs",
+              "DocumentMoniker": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlElementMenu.cs",
+              "RelativeDocumentMoniker": "Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlElementMenu.cs",
+              "ToolTip": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlElementMenu.cs",
+              "RelativeToolTip": "Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlElementMenu.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:38:12.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ctrlEditStatuses.cs",
+              "DocumentMoniker": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs",
+              "RelativeDocumentMoniker": "Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs",
+              "ToolTip": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs",
+              "RelativeToolTip": "Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:35:44.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ctrlEditStatuses.cs [Design]",
+              "DocumentMoniker": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs",
+              "RelativeDocumentMoniker": "Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs",
+              "ToolTip": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs [Design]",
+              "RelativeToolTip": "Task Board\\Panels\\StatusSettings\\ctrlEditStatuses.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:35:35.394Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ctrlCreateTaskStatus.cs [Design]",
+              "DocumentMoniker": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlCreateTaskStatus.cs",
+              "RelativeDocumentMoniker": "Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlCreateTaskStatus.cs",
+              "ToolTip": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlCreateTaskStatus.cs [Design]",
+              "RelativeToolTip": "Task Board\\Panels\\StatusSettings\\ElementSettings\\ctrlCreateTaskStatus.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:35:00.653Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ctrlEditTaskPanelSide.cs",
+              "DocumentMoniker": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Task\\Edit\\ctrlEditTaskPanelSide.cs",
+              "RelativeDocumentMoniker": "Task Board\\Task\\Edit\\ctrlEditTaskPanelSide.cs",
+              "ToolTip": "C:\\Kanban-Board\\KanbanBoard\\Task Board\\Task\\Edit\\ctrlEditTaskPanelSide.cs",
+              "RelativeToolTip": "Task Board\\Task\\Edit\\ctrlEditTaskPanelSide.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAIkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T02:57:38.006Z",
               "EditorCaption": ""
             }
           ]

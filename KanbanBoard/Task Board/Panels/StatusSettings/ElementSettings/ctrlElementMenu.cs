@@ -94,7 +94,7 @@ namespace KanbanBoard.Task_Board.Panels.StatusSettings.ElementSettings
                 }
                 else
                 {
-                    clsGlobal.Notification($"You can't delete the status while {TasksCount} tasks are associated with it", Color.Red);
+                    clsGlobal.Notification($"Remove the tasks in it first!", Color.Red);
                 }
 
             }
